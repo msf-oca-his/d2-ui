@@ -41,7 +41,7 @@ class OrgUnitTree extends React.Component {
                 : undefined,
             loading: false,
         };
-        if (!props.root.children instanceof Model) {
+        if (props.root.children && !Array.isArray(props.root.children.toArray) && typeof props.root.children.toArray === 'function') {
             this.state.children = props.root.children
                 .toArray()
                 // Sort here since the API returns nested children in random order

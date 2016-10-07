@@ -1,5 +1,5 @@
 {
-    "presets": ["stage-0", "react", "es2015"],
+    "presets": ["stage-0", "react", ["es2015", { "modules": false }]],
     "plugins": [
         "transform-class-properties",
         "transform-es2015-template-literals",
@@ -22,6 +22,7 @@
         "transform-es2015-typeof-symbol",
         ["transform-regenerator", { "async": false, "asyncGenerators": false }]
     ],
+
     "env": {
         "test": {
             "presets": ["stage-0", "react", "es2015"],
